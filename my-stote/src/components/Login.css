@@ -4,6 +4,10 @@
   padding: 15px;
   margin: 0 auto;
 }
+
+img.logo-img {
+  margin-bottom: -10px !important;
+}
 .form-signin .checkbox {
   font-weight: 400;
 }
@@ -26,4 +30,14 @@
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.forgot a {
+  color: #212121;
+  font-weight: 600;
+}
+
+.forgot a:hover {
+  color: #d8703f;
+  text-decoration: none;
 }
