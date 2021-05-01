@@ -1,13 +1,35 @@
 import React from "react";
 import "./Header.css";
-import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CallIcon from "@material-ui/icons/Call";
+import logo from "../img/myStoreLogo3.png";
+import SearchIcon from "@material-ui/icons/Search";
 
 function Header() {
   return (
     <div className="header">
-      <div className="text-center">
-        <h1>Header</h1>
+      <div className="header__contact">
+        <CallIcon />
+        <p>Order Online or Call us : +1 819 999 9999</p>
+      </div>
+
+      <div className="header__logo">
+        <a href="#">
+          <img src={logo} alt="My Store" />
+        </a>
+      </div>
+
+      <div className="header__search">
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            <SearchIcon />
+          </button>
+        </form>
       </div>
     </div>
   );

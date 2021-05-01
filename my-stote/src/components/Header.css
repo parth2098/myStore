@@ -1,0 +1,28 @@
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.5em 0;
+  height: 100px;
+  align-items: center;
+}
+
+.header__contact {
+  display: flex;
+  justify-content: space-around;
+  flex: 0.3;
+}
+
+.header__logo {
+  margin-top: 0 px !important;
+  flex: 0.4;
+}
+
+.header__logo > a > img {
+  height: 150px;
+  width: 150px;
+}
+
+.search {
+  flex: 0.3;
+}

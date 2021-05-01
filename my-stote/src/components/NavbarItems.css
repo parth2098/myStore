@@ -1,0 +1,7 @@
+.navbarItems {
+  display: flex;
+}
+
+.navbarItems > ul > li > a {
+  color: white;
+}
