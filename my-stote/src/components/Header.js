@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import CallIcon from "@material-ui/icons/Call";
-import logo from "../img/myStoreLogo3.png";
+import logo from "../images/myStoreLogo3.png";
 import SearchIcon from "@material-ui/icons/Search";
 
 function Header() {

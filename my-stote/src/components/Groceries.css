@@ -1,0 +1,34 @@
+.groceries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+.card {
+  width: 18rem;
+  margin: 10px;
+}
+
+.card--image:hover {
+  cursor: pointer;
+}
+
+.card--details {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-text {
+  font-weight: 700;
+}
+
+.card-lignthrough {
+  text-decoration: line-through;
+}
+
+.card--btn {
+  text-transform: uppercase;
+}
+.card--btn:hover {
+  background-color: #fe9126;
+}

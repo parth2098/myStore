@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
+import Groceries from "./components/Groceries";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       {/* nav */}
       <Navbar />
+      <Groceries />
       {/* <Login /> */}
     </div>
   );
