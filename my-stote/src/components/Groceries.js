@@ -22,9 +22,9 @@ function Groceries() {
               </a>
             </div>
             <div className="card--details">
-              <p class="card-text">${products.sellPrice}</p>
+              <p class="card-text">$ {products.sellPrice}</p>
 
-              <p class="card-text card-lignthrough">${products.price}</p>
+              <p class="card-text card-lignthrough">$ {products.price}</p>
             </div>
             <a href="#" class="btn btn-primary card--btn">
               Add To Cart

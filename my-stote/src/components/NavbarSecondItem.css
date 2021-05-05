@@ -1,0 +1,7 @@
+.navbarSecondItem {
+  margin-left: 10px;
+}
+
+.navbarSecondItem:hover {
+  cursor: pointer;
+}

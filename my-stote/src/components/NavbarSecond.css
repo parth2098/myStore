@@ -1,0 +1,37 @@
+.navbarSecond__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex: 0.5;
+}
+.navbarSecond__sale {
+  color: white;
+}
+
+.navVaeSecond__sale--orange {
+  color: #fe9126;
+  font-weight: 700;
+}
+
+.navVaeSecond__sale--orange:hover {
+  text-decoration: none;
+  color: #fe9126;
+}
+
+.navbarSecond--textWhite {
+  color: white;
+}
+
+.navbarSecond__links {
+  display: flex;
+  flex: 0.5;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbarSecond__links--left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
