@@ -8,10 +8,6 @@ import "./Home.css";
 function Home() {
   return (
     <div className="home text-center">
-      <NavbarSecond />
-      <Header />
-      <Navbar />
-
       <Groceries />
     </div>
   );

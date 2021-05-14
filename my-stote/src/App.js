@@ -6,13 +6,19 @@ import Navbar from "./components/Navbar";
 import Groceries from "./components/Groceries";
 import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./Home";
+import SingleProduct from "./components/SingleProduct";
+import NavbarSecond from "./components/NavbarSecond";
 
 function App() {
   return (
     <BrowserRouter>
+      <NavbarSecond />
+      <Header />
+      <Navbar />
       <div className="app text-center">
         <Route path="/" component={Home} exact></Route>
-        <Route path="/grocery" component={Groceries}></Route>
+        <Route path="/grocery" component={Groceries} exact></Route>
+        <Route path="/grocery/:id" component={SingleProduct}></Route>
         <Route path="/login" component={Login}></Route>
       </div>
     </BrowserRouter>
