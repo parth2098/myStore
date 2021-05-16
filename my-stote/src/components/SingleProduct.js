@@ -5,7 +5,7 @@ import data from "../data";
 
 function SingleProduct(props) {
   // props.match.params.id will be same as product id on which user has clicked
-  const product = data.products.find((x) => x._id == props.match.params.id);
+  const product = data.products.find((x) => x._id === props.match.params.id);
   if (!product) {
     return <div>Product does not exist</div>;
   }
@@ -36,6 +36,17 @@ function SingleProduct(props) {
             </div>
           </div>
           <div className="btn btn-primary mt-3">ADD TO CART</div>
+          {product.stock > 0 ? (
+            product.stock >= 3 ? (
+              <p className=""></p>
+            ) : (
+              <div className="alert alert-danger mt-1">
+                Only {product.stock} left
+              </div>
+            )
+          ) : (
+            <div className="alert alert-danger mt-1">unavalable</div>
+          )}
         </div>
       </div>
     </div>

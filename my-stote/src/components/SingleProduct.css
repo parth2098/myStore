@@ -9,6 +9,7 @@
 .singleProduct__img {
   width: 300px;
   display: flex;
+  padding: 20px;
 }
 
 .singleProduct__title {
