@@ -39,3 +39,7 @@
   align-items: center;
   justify-content: space-around;
 }
+
+.singleProducr__right--btn:hover {
+  background-color: #fe9126;
+}

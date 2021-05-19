@@ -35,7 +35,10 @@ function SingleProduct(props) {
               $ {product.price}
             </div>
           </div>
-          <div className="btn btn-primary mt-3">ADD TO CART</div>
+          <div className="btn btn-primary mt-3 singleProducr__right--btn">
+            ADD TO CART
+          </div>
+          {/* Veify stocks. */}
           {product.stock > 0 ? (
             product.stock >= 3 ? (
               <p className=""></p>
