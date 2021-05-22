@@ -1,0 +1,23 @@
+{
+  "name": "mystore",
+  "type":"module",
+  "version": "1.0.0",
+  "description": "\"An online Grocery Store\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parth2098/myStore.git"
+  },
+  "author": "Parth Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parth2098/myStore/issues"
+  },
+  "homepage": "https://github.com/parth2098/myStore#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
