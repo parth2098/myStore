@@ -5,7 +5,7 @@
   "description": "\"An online Grocery Store\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+   "start" : "nodemon --watch backend --exec node --experimental-modules backend/index.js"
   },
   "repository": {
     "type": "git",
