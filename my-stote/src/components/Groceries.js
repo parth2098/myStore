@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Groceries.css";
-import data from "../data";
+import axios from "axios";
 
 function Groceries() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get("/api/products");
+      setProducts(data);
+    };
+    fetchData();
+  }, []);
+
   return (
     <div className="groceries">
       {/* Using map functionn to get data from data.js */}
-      {data.products.map((products) => (
+      {products.map((products) => (
         <div key={products._id} class="card">
           <a href={`/grocery/${products._id}`}>
             <img

@@ -1,11 +1,19 @@
 import { Button } from "bootstrap";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./SingleProduct.css";
-import data from "../data";
+import axios from "axios";
 
 function SingleProduct(props) {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get("/api/products");
+      setProducts(data);
+    };
+    fetchData();
+  }, []);
   // props.match.params.id will be same as product id on which user has clicked
-  const product = data.products.find((x) => x._id === props.match.params.id);
+  const product = products.find((x) => x._id === props.match.params.id);
   if (!product) {
     return <div>Product does not exist</div>;
   }
