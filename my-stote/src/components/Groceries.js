@@ -6,7 +6,7 @@ import Product from "./Product";
 
 function Groceries() {
   const productList = useSelector((state) => state.productList);
-  const { products } = productList;
+  const { error, products } = productList;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,16 +15,18 @@ function Groceries() {
 
   return (
     <div className="groceries">
+      {error
+        ? { error }
+        : products.map((products) => (
+            <Product
+              productId={products._id}
+              productImg={products.prodImage}
+              productName={products.name}
+              productSellPrice={products.sellPrice}
+              productPrice={products.price}
+            />
+          ))}
       {/* Using map functionn to get data from data.js */}
-      {products.map((products) => (
-        <Product
-          productId={products._id}
-          productImg={products.prodImage}
-          productName={products.name}
-          productSellPrice={products.sellPrice}
-          productPrice={products.price}
-        />
-      ))}
     </div>
   );
 }
