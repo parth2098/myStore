@@ -39,6 +39,25 @@
   align-items: center;
   justify-content: space-around;
 }
+.singleProduct__qty {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.singleProduct__qty--select {
+  cursor: default;
+  width: 100px;
+  height: 40px;
+
+  line-height: 24px;
+  border: 1px solid #e5e5e5;
+
+  text-align: center;
+
+  margin-left: 30px;
+}
 
 .singleProducr__right--btn:hover {
   background-color: #fe9126;

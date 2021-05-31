@@ -10,10 +10,15 @@ function SingleProduct(props) {
   const { error, product } = productDetails;
   const dispatch = useDispatch();
   const productId = props.match.params.id;
+  const [qty, setQty] = useState(1);
 
   useEffect(() => {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId]);
+
+  const addToCartHandler = () => {
+    props.history.push(`/cart/${productId}?qty=${qty}`);
+  };
 
   return (
     <div className="singleProduct">
@@ -44,9 +49,33 @@ function SingleProduct(props) {
                 $ {product.price}
               </div>
             </div>
-            <div className="btn btn-primary mt-3 singleProducr__right--btn">
-              ADD TO CART
-            </div>
+            {product.stock > 0 && (
+              <>
+                <div className="singleProduct__qty">
+                  <div className="singleProduct__qty--lable font-weight-bold">
+                    Qty :
+                  </div>
+                  <select
+                    className="singleProduct__qty--select"
+                    value={qty}
+                    onChange={(e) => setQty(e.target.value)}
+                  >
+                    {[...Array(product.stock).keys()].map((x) => (
+                      <option key={x + 1} value={x + 1}>
+                        {x + 1}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div
+                  className="btn btn-primary mt-3 singleProducr__right--btn"
+                  onClick={addToCartHandler}
+                >
+                  ADD TO CART
+                </div>
+              </>
+            )}
+
             {/* Veify stocks. */}
             {product.stock > 0 ? (
               product.stock >= 3 ? (
