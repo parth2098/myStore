@@ -11,7 +11,7 @@ const data = {
       sellPrice: 59,
       description:
         "The pigeon pea, also known as pigeonpea, red gram, tur, or gungo peas, gungu peas, gunga peas in Jamaica, is a perennial legume from the family Fabaceae. Since its domestication in the Indian subcontinent at least 3,500 years ago, its seeds have become a common food in Asia, Africa, and Latin America.",
-      stock: 1,
+      stock: 6,
     },
 
     {
@@ -25,7 +25,7 @@ const data = {
       sellPrice: 59,
       description:
         "The pigeon pea, also known as pigeonpea, red gram, tur, or gungo peas, gungu peas, gunga peas in Jamaica, is a perennial legume from the family Fabaceae. Since its domestication in the Indian subcontinent at least 3,500 years ago, its seeds have become a common food in Asia, Africa, and Latin America.",
-      stock: 2,
+      stock: 20,
     },
 
     {
@@ -39,7 +39,7 @@ const data = {
       sellPrice: 59,
       description:
         "The pigeon pea, also known as pigeonpea, red gram, tur, or gungo peas, gungu peas, gunga peas in Jamaica, is a perennial legume from the family Fabaceae. Since its domestication in the Indian subcontinent at least 3,500 years ago, its seeds have become a common food in Asia, Africa, and Latin America.",
-      stock: 1,
+      stock: 51,
     },
 
     {
@@ -109,7 +109,7 @@ const data = {
       sellPrice: 59,
       description:
         "The pigeon pea, also known as pigeonpea, red gram, tur, or gungo peas, gungu peas, gunga peas in Jamaica, is a perennial legume from the family Fabaceae. Since its domestication in the Indian subcontinent at least 3,500 years ago, its seeds have become a common food in Asia, Africa, and Latin America.",
-      stock: 10,
+      stock: 100,
     },
   ],
 };

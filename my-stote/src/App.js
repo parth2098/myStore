@@ -9,6 +9,7 @@ import Home from "./Home";
 import SingleProduct from "./components/SingleProduct";
 import NavbarSecond from "./components/NavbarSecond";
 import Cart from "./components/Cart";
+import { useSelector } from "react-redux";
 
 function App() {
   return (

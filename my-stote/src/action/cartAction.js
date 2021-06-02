@@ -1,0 +1,19 @@
+import Axios from "axios";
+import { CART_ADD_ITEM } from "../constants/cartConstant";
+
+export const addToCart = (productId, qty) => async (dispatch, getState) => {
+  const { data } = await Axios.get(`/api/products/${productId}`);
+  dispatch({
+    type: CART_ADD_ITEM,
+    payload: {
+      //   Here data is a product
+      name: data.name,
+      image: data.prodImage,
+      price: data.sellPrice,
+      stock: data.stock,
+      product: data._id,
+      qty,
+    },
+  });
+  localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NavbarDropDown from "./NavbarDropDown";
 import "./NavbarItems.css";
 
@@ -7,9 +8,9 @@ function NavbarItems() {
     <div className="navbarItems">
       <ul class="navbar-nav">
         <li className="nav-item">
-          <a href="#" className="nav-link">
+          <Link to="/" className="nav-link">
             Home
-          </a>
+          </Link>
         </li>
         <NavbarDropDown title="Grocery" />
         <NavbarDropDown title="Household" />
@@ -17,14 +18,14 @@ function NavbarItems() {
         <NavbarDropDown title="Packaged Food" />
         <NavbarDropDown title="Bevrages" />
         <li className="nav-item">
-          <a href="#" className="nav-link">
+          <Link to="#" className="nav-link">
             Gourmet
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link">
+          <Link to="#" className="nav-link">
             Offer
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
