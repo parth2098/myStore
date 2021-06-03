@@ -62,3 +62,32 @@
 .singleProducr__right--btn:hover {
   background-color: #fe9126;
 }
+
+.cart__img {
+  width: 130px;
+  height: 130px;
+}
+
+.cart__itemName {
+  text-decoration: none;
+  color: black;
+}
+
+.cart__quantity > select {
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 9px;
+  width: 50%;
+}
+
+.cart__itemName:hover {
+  text-decoration: none;
+  color: #fe9126;
+}
+
+.cart__remove :hover {
+  color: red;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
