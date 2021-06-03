@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Cart.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../action/cartAction";
+import { addToCart, removeFromCart } from "../action/cartAction";
 import { Link } from "react-router-dom";
 import CancelPresentationIcon from "@material-ui/icons/CancelPresentation";
 
@@ -23,6 +23,7 @@ function Cart(props) {
 
   const removeFromCartHandler = (id) => {
     // Delete Action
+    dispatch(removeFromCart(id));
   };
 
   const checkoutHandler = () => {
@@ -122,17 +123,23 @@ function Cart(props) {
                     ${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
                   </div>
                 </li>
-                <li className="cart__orderSummart--list">
+
+                {/* <li className="cart__orderSummart--list">
                   <div className="list-item">Shipping Charges :</div>
-                  <div className="list-item">$25.00</div>
+                  <div className="list-item">$12.00</div>
                 </li>
                 <li className="cart__orderSummart--list">
                   <div className="list-item">Tax Charges :</div>
-                  <div className="list-item">$25.00</div>
-                </li>
+                  <div className="list-item">
+                    {cartItems.reduce((a, c) => a + c.price * c.qty * 0.15, 0)}
+                  </div>
+                </li> */}
+
                 <li className="cart__orderSummart--list">
                   <div className="list-item">Total :</div>
-                  <div className="list-item">$25.00</div>
+                  <div className="list-item">
+                    ${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+                  </div>
                 </li>
               </ul>
 
