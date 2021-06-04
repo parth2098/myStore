@@ -13,6 +13,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { signout } from "./action/userAction";
 import { Link } from "@material-ui/core";
 import SignUp from "./components/SignUp";
+import ShippingAddress from "./components/ShippingAddress";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/cart/:id?" component={Cart}></Route>
         <Route path="/login" component={Login}></Route>
         <Route path="/register" component={SignUp}></Route>
+        <Route path="/shipping" component={ShippingAddress}></Route>
       </div>
     </BrowserRouter>
   );
