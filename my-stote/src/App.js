@@ -14,6 +14,8 @@ import { signout } from "./action/userAction";
 import { Link } from "@material-ui/core";
 import SignUp from "./components/SignUp";
 import ShippingAddress from "./components/ShippingAddress";
+import Payment from "./components/Payment";
+import PlaceOrder from "./components/PlaceOrder";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path="/login" component={Login}></Route>
         <Route path="/register" component={SignUp}></Route>
         <Route path="/shipping" component={ShippingAddress}></Route>
+        <Route path="/payment" component={Payment}></Route>
+        <Route path="/placeOrder" component={PlaceOrder}></Route>
       </div>
     </BrowserRouter>
   );
