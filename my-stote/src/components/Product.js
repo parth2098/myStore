@@ -3,7 +3,7 @@ import "./Product.css";
 import { Link } from "react-router-dom";
 function Product({
   productId,
-  productImg,
+  image,
   productName,
   productSellPrice,
   productPrice,
@@ -14,7 +14,7 @@ function Product({
         <Link to={`/grocery/${productId}`}>
           <img
             className="card-img-top card--image"
-            src={productImg}
+            src={image}
             alt={productName}
           />
         </Link>

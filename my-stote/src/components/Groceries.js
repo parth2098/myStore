@@ -20,7 +20,7 @@ function Groceries() {
         : products.map((products) => (
             <Product
               productId={products._id}
-              productImg={products.prodImage}
+              image={products.image}
               productName={products.name}
               productSellPrice={products.sellPrice}
               productPrice={products.price}

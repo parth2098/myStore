@@ -28,7 +28,7 @@ function SingleProduct(props) {
         <div className="row">
           <div className="col-md-4">
             <div className="card singleProduct__img">
-              <img src={product.prodImage} alt={product.name} />
+              <img src={product.image} alt={product.name} />
             </div>
           </div>
           <div className="col-md-8 singleProducr__right">
