@@ -68,6 +68,7 @@ function Cart(props) {
                             <img
                               className="cart__img"
                               src={item.image}
+                              {...console.log(item.image)}
                               alt={item.name}
                             ></img>
                           </Link>
