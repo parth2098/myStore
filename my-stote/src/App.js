@@ -9,7 +9,9 @@ import Home from "./Home";
 import SingleProduct from "./components/SingleProduct";
 import NavbarSecond from "./components/NavbarSecond";
 import Cart from "./components/Cart";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { signout } from "./action/userAction";
+import { Link } from "@material-ui/core";
 
 function App() {
   return (
@@ -21,8 +23,8 @@ function App() {
         <Route path="/" component={Home} exact></Route>
         <Route path="/grocery" component={Groceries} exact></Route>
         <Route path="/grocery/:id" component={SingleProduct}></Route>
-        <Route path="/login" component={Login}></Route>
         <Route path="/cart/:id?" component={Cart}></Route>
+        <Route path="/login" component={Login}></Route>
       </div>
     </BrowserRouter>
   );

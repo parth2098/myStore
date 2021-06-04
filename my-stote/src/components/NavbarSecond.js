@@ -4,11 +4,20 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import NavbarItems from "./NavbarItems";
 import NavbarSecondItem from "./NavbarSecondItem";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { signout } from "../action/userAction";
 
 function NavbarSecond() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+  const dispatch = useDispatch();
+  const signoutHandler = () => {
+    dispatch(signout());
+  };
+
   return (
     <div className="navbarSecond">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbarSecond__content">
@@ -22,7 +31,17 @@ function NavbarSecond() {
 
         <div class="navbarSecond__links" id="navbarText">
           <ul class="navbar-nav navbarSecond__links--left">
-            <NavbarSecondItem text="Log In" link="/Login" />
+            {userInfo ? (
+              <>
+                <NavbarSecondItem
+                  text="Sign Out"
+                  link="#signout"
+                  onClick={signoutHandler}
+                />
+              </>
+            ) : (
+              <NavbarSecondItem text="Log In" link="/Login" />
+            )}
             <NavbarSecondItem text="Sign Up" link="/Login" />
             <NavbarSecondItem text="Help" link="/Login" />
           </ul>
