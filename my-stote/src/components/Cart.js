@@ -156,9 +156,9 @@ function Cart(props) {
         </>
       )}
 
-      <p>
+      {/* <p>
         ADD TO CART : ProductId : {productId} Qty:{qty}
-      </p>
+      </p> */}
     </div>
   );
 }

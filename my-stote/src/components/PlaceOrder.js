@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./PlaceOrder.css";
 import logo from "../images/myStoreLogo3.png";
 import { Link } from "@material-ui/core";
-import { useSelector } from "react-redux";
+import { createOrder } from "../action/orderActions";
+import { ORDER_CREATE_RESET } from "../constants/orderConstants";
+
 import CheckoutSteps from "./CheckoutSteps";
 
 function PlaceOrder(props) {
@@ -10,6 +13,10 @@ function PlaceOrder(props) {
   if (!cart.paymentMethod) {
     props.history.push("/payment");
   }
+
+  const orderCreate = useSelector((state) => state.orderCreate);
+  const { loading, success, error, order } = orderCreate;
+
   const toPrice = (num) => Number(num.toFixed(2)); // 5.123 => "5.12" => 5.12
   cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
@@ -17,9 +24,17 @@ function PlaceOrder(props) {
   cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10);
   cart.taxPrice = toPrice(0.15 * cart.itemsPrice);
   cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
+  const dispatch = useDispatch();
   const placeOrderHandler = () => {
-    // TODO: dispatch place order action
+    dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
   };
+
+  useEffect(() => {
+    if (success) {
+      props.history.push(`/order/${order._id}`);
+      dispatch({ type: ORDER_CREATE_RESET });
+    }
+  }, [dispatch, order, props.history, success]);
 
   return (
     <>
@@ -70,6 +85,7 @@ function PlaceOrder(props) {
             </button>
           </ul>
           <div class="card-footer text-muted">{cart.paymentMethod}</div>
+          {error && <div>{error}</div>}
         </div>
       </div>
     </>
