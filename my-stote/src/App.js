@@ -12,6 +12,7 @@ import Cart from "./components/Cart";
 import { useSelector, useDispatch } from "react-redux";
 import { signout } from "./action/userAction";
 import { Link } from "@material-ui/core";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/grocery/:id" component={SingleProduct}></Route>
         <Route path="/cart/:id?" component={Cart}></Route>
         <Route path="/login" component={Login}></Route>
+        <Route path="/register" component={SignUp}></Route>
       </div>
     </BrowserRouter>
   );

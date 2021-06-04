@@ -69,8 +69,10 @@ function Login(props) {
         <div class="forgot">
           <Link to="#">Forget Password</Link>
         </div>
+        <br></br>
         <div class="forgot">
-          <Link to="/signup">New Customer...?</Link>
+          New Customer?{" "}
+          <Link to={`/register?redirect=${redirect}`}>Create Your Account</Link>
         </div>
       </form>
     </div>

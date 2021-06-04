@@ -42,8 +42,6 @@ function NavbarSecond() {
             ) : (
               <NavbarSecondItem text="Log In" link="/Login" />
             )}
-            <NavbarSecondItem text="Sign Up" link="/Login" />
-            <NavbarSecondItem text="Help" link="/Login" />
           </ul>
           <ul className="navbar-nav navbarSecond__cart">
             <NavbarSecondItem text={<ShoppingCartIcon />} link="/Cart" />

@@ -24,17 +24,19 @@
 }
 
 .navbarSecond__links {
-  display: flex;
-  flex: 0.5;
+  /* display: flex;
+  
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; */
+
+  display: flex;
 }
 
-.navbarSecond__links--left {
+/* .navbarSecond__links--left {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
+} */
 
 .navbarSecond__cart {
   display: flex;
