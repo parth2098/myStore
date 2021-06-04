@@ -1,11 +1,25 @@
+import bcrypt from "bcryptjs";
 const data = {
+  users: [
+    {
+      name: "Parth",
+      email: "admin@example.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: true,
+    },
+    {
+      name: "John",
+      email: "user@example.com",
+      password: bcrypt.hashSync("1234", 8),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id: "1",
       name: "Toor Dal",
       category: "Grocery",
       subCategory: "Dal & Pulses",
-      prodImage:
+      image:
         "https://5.imimg.com/data5/RO/UP/MY-5329745/tata-sampann-chana-dal-500x500.jpg",
       price: 99,
       sellPrice: 59,
@@ -15,11 +29,10 @@ const data = {
     },
 
     {
-      _id: "2",
       name: "Moong Dal",
       category: "Grocery",
       subCategory: "Dal & Pulses",
-      prodImage:
+      image:
         "https://5.imimg.com/data5/RO/UP/MY-5329745/tata-sampann-chana-dal-500x500.jpg",
       price: 99,
       sellPrice: 59,
@@ -29,11 +42,10 @@ const data = {
     },
 
     {
-      _id: "3",
       name: "Channa Dal",
       category: "Grocery",
       subCategory: "Dal & Pulses",
-      prodImage:
+      image:
         "https://5.imimg.com/data5/RO/UP/MY-5329745/tata-sampann-chana-dal-500x500.jpg",
       price: 99,
       sellPrice: 59,
@@ -43,11 +55,10 @@ const data = {
     },
 
     {
-      _id: "4",
       name: "Arhar Dal",
       category: "Grocery",
       subCategory: "Dal & Pulses",
-      prodImage:
+      image:
         "https://5.imimg.com/data5/RO/UP/MY-5329745/tata-sampann-chana-dal-500x500.jpg",
       price: 99,
       sellPrice: 59,
@@ -57,11 +68,10 @@ const data = {
     },
 
     {
-      _id: "5",
-      name: "Toor Dal",
+      name: "Dal",
       category: "Grocery",
       subCategory: "Dal & Pulses",
-      prodImage:
+      image:
         "https://5.imimg.com/data5/RO/UP/MY-5329745/tata-sampann-chana-dal-500x500.jpg",
       price: 99,
       sellPrice: 59,
@@ -71,11 +81,10 @@ const data = {
     },
 
     {
-      _id: "6",
-      name: "Moong Dal",
+      name: "Moong",
       category: "Grocery",
       subCategory: "Dal & Pulses",
-      prodImage:
+      image:
         "https://5.imimg.com/data5/RO/UP/MY-5329745/tata-sampann-chana-dal-500x500.jpg",
       price: 99,
       sellPrice: 59,
@@ -85,11 +94,10 @@ const data = {
     },
 
     {
-      _id: "7",
-      name: "Channa Dal",
+      name: "Channa",
       category: "Grocery",
       subCategory: "Dal & Pulses",
-      prodImage:
+      image:
         "https://5.imimg.com/data5/RO/UP/MY-5329745/tata-sampann-chana-dal-500x500.jpg",
       price: 999,
       sellPrice: 59,
@@ -99,11 +107,10 @@ const data = {
     },
 
     {
-      _id: "8",
-      name: "Arhar Dal",
+      name: "Arhar",
       category: "Grocery",
       subCategory: "Dal & Pulses",
-      prodImage:
+      image:
         "https://5.imimg.com/data5/RO/UP/MY-5329745/tata-sampann-chana-dal-500x500.jpg",
       price: 9,
       sellPrice: 59,
