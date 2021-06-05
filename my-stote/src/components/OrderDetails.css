@@ -1,6 +1,5 @@
 .orderDetails {
-  display: flex;
-  justify-content: center;
-  padding-top: 15px;
-  flex-wrap: nowrap;
+  padding-left: auto;
+  padding-right: auto;
+  width: 4000px;
 }

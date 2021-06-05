@@ -57,7 +57,6 @@ function Payment(props) {
             id="other"
             value="Other"
             name="paymentMethod"
-            checked
             className="form-check-input"
             required
             onChange={(e) => setPaymentMethod(e.target.value)}
