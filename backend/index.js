@@ -26,9 +26,13 @@ app.get("/api/config/paypal", (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID || "sb");
 });
 
-app.get("/", (req, res) => {
-  res.send("Jai Swaminarayan");
-});
+// app.get("/", (req, res) => {
+//   res.send("Jai Swaminarayan");
+// });
+app.use(express.static(path.join(__dirname, "/my-stote/build")));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "/my-stote/build/index.html"))
+);
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
