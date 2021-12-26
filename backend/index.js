@@ -4,12 +4,9 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import userRouter from "./routers/userRouter.js";
 import orderRouter from "./routers/orderRouter.js";
-// import { path } from "express/lib/application";
-
 dotenv.config();
 
 const app = express();
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -29,14 +26,14 @@ app.get("/api/config/paypal", (req, res) => {
 // app.get("/", (req, res) => {
 //   res.send("Jai Swaminarayan");
 // });
-app.use(express.static(path.join(__dirname, "/my-stote/build")));
-app.get("*", (req, res) =>
-  res.sendFile(path.join(__dirname, "/my-stote/build/index.html"))
-);
+// app.use(express.static(path.join(__dirname, "/my-stote/build")));
+// app.get("*", (req, res) =>
+//   res.sendFile(path.join(__dirname, "/my-stote/build/index.html"))
+// );
 
-app.use((err, req, res, next) => {
-  res.status(500).send({ message: err.message });
-});
+// app.use((err, req, res, next) => {
+//   res.status(500).send({ message: err.message });
+// });
 
 const port = process.env.PORT || 5000;
 

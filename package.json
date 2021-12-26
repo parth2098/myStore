@@ -5,7 +5,7 @@
   "description": "\"An online Grocery Store\"",
   "main": "index.js",
   "scripts": {
-    "build": "cd my-stote && npm install && npm run build",
+    
 
     "start": "nodemon --watch backend --exec node --experimental-modules backend/index.js"
   },
@@ -29,6 +29,5 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.12",
     "react-paypal-button-v2": "^2.6.3"
-  },
-  "engines": {"node":"14.15.1", "npm": "6.14.5"}
+  }
 }
